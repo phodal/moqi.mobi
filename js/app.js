@@ -1,5 +1,5 @@
 // Filename: app.js
-define(['jquery', 'underscore', 'mustache', "!text/nav.html"], function($, _, Mustache, navTemplate){
+define(['jquery', 'underscore', 'mustache', "text!/templates/nav.html"], function($, _, Mustache, navTemplate){
 
     var initialize = function() {
         var person = {
