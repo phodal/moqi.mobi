@@ -1,5 +1,6 @@
 // Filename: app.js
-define(['jquery', 'underscore', 'mustache'], function($, _, Mustache){
+define(['jquery', 'underscore', 'mustache', "!text/nav.html"], function($, _, Mustache, navTemplate){
+
     var initialize = function() {
         var person = {
             firstName: "Phodal",
@@ -9,7 +10,7 @@ define(['jquery', 'underscore', 'mustache'], function($, _, Mustache){
         var template = "<h1>{{firstName}} {{lastName}}</h1>Blog: {{blogURL}}";
         var html = Mustache.to_html(template, person);
         $('#sampleArea').html(html);
-    }
+    };
 
     return {
         initialize: initialize
