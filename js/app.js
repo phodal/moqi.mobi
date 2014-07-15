@@ -2,13 +2,14 @@
 define(['jquery', 'underscore', 'mustache', "text!/templates/nav.html"], function($, _, Mustache, navTemplate){
 
     var initialize = function() {
-        var person = {
+        var info = {
             firstName: "Phodal",
             lastName: "Huang",
-            blogURL: "http://www.phodal.com"
+            blogURL: "http://www.phodal.com",
+            Run:"python -m SimpleHTTPServer 8000"
         };
-        var template = "<h1>{{firstName}} {{lastName}}</h1>Blog: {{blogURL}}";
-        var html = Mustache.to_html(template, person);
+        var template = navTemplate;
+        var html = Mustache.to_html(template, info);
         $('#sampleArea').html(html);
     };
 
