@@ -1,0 +1,28 @@
+{
+    "seoinfo": {
+        "description": "墨颀移动 CMS移动平台的CMS解决方案",
+        "keywords": "移动CMS,移动CMS框架,移动平台CMS,移动CMS系统",
+        "title": "墨颀 CMS - 移动平台的CMS解决方案",
+        "copyrightInfo": "&copy; 2014 Moqi.mobi. All Rights Reserved"
+    },
+    "product":[
+        {
+            "type": "个人",
+            "price":"免费",
+            "addInfo":"标明版权",
+            "css": ""
+        },
+        {
+            "type": "商业",
+            "price": "免费",
+            "addInfo":"标明版权",
+            "css": "pricing-table-biz pricing-table-selected"
+        },
+        {
+            "type": "企业",
+            "price": "免费",
+            "addInfo":"标明版权",
+            "css": "pricing-table-enterprise"
+        }
+    ]
+}

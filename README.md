@@ -4,6 +4,6 @@
  - Underscore
  - jQuery 
  - Mustache / Pure.js
- - Bootstrap?
+ - Pure CSS
  - Pagedown
  
