@@ -1,6 +1,15 @@
-<h1>{{^title}}{{/title}}</h1>
-时间:<span>{{created}}</span>
-关键词: <span>{{keywords}}</span>
-<p>
-    {{description}}
-</p>
+{{#.}}
+<div class="pure-u-1 pure-u-md-1-2">
+    <div class="l-box">
+        <h3 class="information-head">{{title}}</h3>
+        <p>
+        时间:<span>{{created}}</span>
+        关键词: <span>{{keywords}}</span>
+        <p>
+            {{description}}
+        </p>
+
+        </p>
+    </div>
+</div>
+{{/.}}

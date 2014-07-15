@@ -2,7 +2,9 @@ require.config({
     baseUrl: 'lib/',
     paths: {
         'text': 'text',
-        jquery: 'jquery-2.1.1.min'
+        jquery: 'jquery-2.1.1.min',
+        async: 'require/async',
+        json: 'require/json'
     },
     shim: {
         underscore: {
