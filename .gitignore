@@ -3,3 +3,7 @@
 *.iws
 *.iml
 out/
+.DS_Store
+css/.DS_Store
+js/.DS_Store
+lib/.DS_Store
