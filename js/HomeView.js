@@ -7,8 +7,9 @@ define([
         'json!/configure.json',
         'text!/templates/product.html',
         '../../js/BlogPostView',
-        '../../js/ProductsView'
-],function($, _, Mustache, indexTemplate, blogPosts, configure, productTemplate, BlogPostView, ProductsView){
+        '../../js/ProductsView',
+        '../../js/FooterView'
+],function($, _, Mustache, indexTemplate, blogPosts, configure, productTemplate, BlogPostView, ProductsView, FooterView){
 
         var HomeView = Backbone.View.extend ({
             el:$('head'),
@@ -19,6 +20,9 @@ define([
 
                 var productsView = new ProductsView();
                 productsView.render();
+
+                var footerView = new FooterView();
+                footerView.render();
 
                 this.$el.html(Mustache.to_html(indexTemplate, configure["seoinfo"]));
             }
