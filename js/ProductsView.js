@@ -11,7 +11,7 @@ define([
 
         render: function(){
             var html = Mustache.to_html(ProductTemplate, configure);
-            this.$el.append(html);
+            this.$el.html(html);
         }
     });
 
