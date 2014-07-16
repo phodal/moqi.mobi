@@ -7,7 +7,7 @@ define([
 ],function($, _, Mustache, ProductTemplate, configure){
 
     var BlogPostView = Backbone.View.extend ({
-        el: $("#products"),
+        el: $("#blogArea"),
 
         render: function(){
             var html = Mustache.to_html(ProductTemplate, configure);

@@ -18,9 +18,6 @@ define([
                 var blogPostView = new BlogPostView();
                 blogPostView.render();
 
-                var productsView = new ProductsView();
-                productsView.render();
-
                 var footerView = new FooterView();
                 footerView.render();
 
