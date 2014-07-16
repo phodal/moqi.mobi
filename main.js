@@ -4,7 +4,9 @@ require.config({
         'text': 'text',
         jquery: 'jquery-2.1.1.min',
         async: 'require/async',
-        json: 'require/json'
+        json: 'require/json',
+        router: '../router',
+        templates: '../templates'
     },
     shim: {
         underscore: {
@@ -13,6 +15,6 @@ require.config({
     }
 });
 
-require(['../js/app'], function(App){
+require(['../app'], function(App){
     App.initialize();
 });
