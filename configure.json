@@ -8,20 +8,20 @@
     "product":[
         {
             "type": "个人",
-            "price":"免费",
-            "addInfo":"标明版权",
-            "css": ""
+            "price":"",
+            "addInfo":"",
+            "css": "pricing-table-free"
         },
         {
             "type": "商业",
-            "price": "免费",
-            "addInfo":"标明版权",
+            "price": "",
+            "addInfo":"",
             "css": "pricing-table-biz pricing-table-selected"
         },
         {
             "type": "企业",
-            "price": "免费",
-            "addInfo":"标明版权",
+            "price": "",
+            "addInfo":"",
             "css": "pricing-table-enterprise"
         }
     ]

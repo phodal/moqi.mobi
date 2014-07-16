@@ -2,33 +2,23 @@ define([
         'jquery',
         'underscore',
         'mustache',
-        "text!/templates/blog_posts.html",
-        "text!/index.html",
-        "json!http://api.phodal.net/blog/page/1",
-        "json!/configure.json",
-        "text!/templates/product.html"],function($, _, Mustache, blogPostsTemplate, indexTemplate, blogPosts, configure, productTemplate){
+        'text!/index.html',
+        'json!http://api.phodal.net/blog/page/1',
+        'json!/configure.json',
+        'text!/templates/product.html',
+        '../../js/BlogPostView',
+        '../../js/ProductsView'
+],function($, _, Mustache, indexTemplate, blogPosts, configure, productTemplate, BlogPostView, ProductsView){
 
         var HomeView = Backbone.View.extend ({
 
             render: function(){
-                var info = [];
+                var blogPostView = new BlogPostView();
+                blogPostView.render();
 
-                $.each(blogPosts,function(key,val){
-                    var results=[];
-                    results.title = val["title"];
-                    results.description = val["description"];
-                    results.slug = val["slug"];
-                    results.keywords = val["keywords"];
-                    results.created = val["created"];
-                    info.push(results);
-                });
+                var productsView = new ProductsView();
+                productsView.render();
 
-                console.log(info);
-                $('#products').html(Mustache.to_html(productTemplate, configure["product"]));
-                console.log(Mustache.to_html(productTemplate, configure["product"]))
-
-                var html = Mustache.to_html(blogPostsTemplate, info);
-                $("#blogArea").html(html);
             }
         });
 
