@@ -21,7 +21,7 @@ define([
                 results.created = val["created"];
                 info.push(results);
             });
-
+            console.log(info);
             var html = Mustache.to_html(blogPostsTemplate, info);
             this.$el.append(html);
         }
