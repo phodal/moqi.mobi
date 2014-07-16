@@ -11,6 +11,7 @@ define([
 ],function($, _, Mustache, indexTemplate, blogPosts, configure, productTemplate, BlogPostView, ProductsView){
 
         var HomeView = Backbone.View.extend ({
+            el:$('html'),
 
             render: function(){
                 var blogPostView = new BlogPostView();
@@ -19,6 +20,8 @@ define([
                 var productsView = new ProductsView();
                 productsView.render();
 
+                var html = Mustache.to_html(indexTemplate, configure["seoinfo"]);
+                this.$el.html(html);
             }
         });
 
