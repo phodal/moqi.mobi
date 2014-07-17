@@ -3,18 +3,16 @@ define([
     'underscore',
     'backbone',
     'js/HomeView.js',
-    'js/ProductPage.js'
-],function($, _, Backbone, HomeView, ProductPage){
+    'js/ProductPage.js',
+    'js/BlogDetailsView.js'
+],function($, _, Backbone, HomeView, ProductPage, BlogDetailsView){
 
     var AppRouter = Backbone.Router.extend({
         routes: {
             'index': 'homePage',
             'product': 'productPage',
-            '*actions': 'homePage',
-            'blog(/:slug)': 'blog'
-        },
-        blog: function(slug){
-            console.log(slug);
+            'blog/*slug': 'blog',
+            '*actions': 'homePage'
         }
     });
     var initialize = function() {
@@ -30,10 +28,10 @@ define([
             productPage.render();
         });
 
-        app_router.on('route:blog', function(){
-            var productPage = new ProductPage();
-            productPage.render();
-            console.log("details");
+        app_router.on('route:blog', function(blogSlug){
+            var blogDetailsView = new BlogDetailsView();
+            blogDetailsView.getBlog(blogSlug);
+            blogDetailsView.render();
         });
 
         Backbone.history.start();
