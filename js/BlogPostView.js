@@ -7,7 +7,7 @@ define([
 ],function($, _, Mustache, blogPostsTemplate, blogPosts){
 
     var BlogPostView = Backbone.View.extend ({
-        el: $("#blogArea"),
+        el: $("#content"),
 
         render: function(){
             var info = [];
