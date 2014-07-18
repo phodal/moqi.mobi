@@ -10,8 +10,7 @@ define([
         el: $("#footer"),
 
         render: function(){
-            var html = Mustache.to_html(footerTemplate, configure["seoinfo"]);
-            this.$el.html(html);
+            this.$el.html(Mustache.to_html(footerTemplate, configure["seoinfo"]));
         }
     });
 
