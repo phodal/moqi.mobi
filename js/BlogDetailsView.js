@@ -4,24 +4,42 @@ define([
     'mustache',
     '../../js/ProductsView',
     'json!/configure.json',
-    'text!/index.html',
+    'text!/templates/blog_details.html',
     "text!/templates/blog_posts.html"
-],function($, _, Mustache, ProductsView, configure, indexTemplate, blogPostsTemplate){
+],function($, _, Mustache, ProductsView, configure, blogDetailsTemplate, blogPostsTemplate){
+
+    var BlogPostModel = Backbone.Model.extend({
+        name: 'Blog Posts',
+        url: function(){
+            return this.instanceUrl;
+        },
+        initialize: function(props){
+            this.instanceUrl = props;
+        }
+    });
 
     var BlogDetailsView = Backbone.View.extend ({
-        el: $("head"),
+        el: $("#content"),
 
         initialize: function () {
         },
 
         getBlog: function(slug) {
-            console.log(slug);
+            url = configure["baseurl"] + "blog/" + slug;
+            var that = this;
+            collection = new BlogPostModel;
+            collection.initialize(url);
+            collection.fetch({
+                success: function(collection, response, options){
+                    that.render(response);
+                }
+            });
         },
 
-        render: function(){
-
-            var html = Mustache.to_html(indexTemplate, configure["seoinfo"]);
-            this.$el.html(html);
+        render: function(response){
+            console.log(response[0]);
+            console.log(Mustache.to_html(blogDetailsTemplate,response));
+            this.$el.html(Mustache.to_html(blogDetailsTemplate,response));
         }
     });
 

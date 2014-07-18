@@ -31,7 +31,6 @@ define([
         app_router.on('route:blog', function(blogSlug){
             var blogDetailsView = new BlogDetailsView();
             blogDetailsView.getBlog(blogSlug);
-            blogDetailsView.render();
         });
 
         Backbone.history.start();

@@ -5,6 +5,7 @@
         "title": "墨颀 CMS - 移动平台的CMS解决方案",
         "copyrightInfo": "@ 2014 Moqi.mobi. All Rights Reserved"
     },
+    "baseurl": "http://api.phodal.net/",
     "product":[
         {
             "type": "个人",
