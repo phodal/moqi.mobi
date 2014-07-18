@@ -30,16 +30,14 @@ define([
             collection = new BlogPostModel;
             collection.initialize(url);
             collection.fetch({
-                success: function(collection, response, options){
+                success: function(collection, response){
                     that.render(response);
                 }
             });
         },
 
         render: function(response){
-            console.log(response[0]);
-            console.log(Mustache.to_html(blogDetailsTemplate,response));
-            this.$el.html(Mustache.to_html(blogDetailsTemplate,response));
+            this.$el.html(Mustache.to_html(blogDetailsTemplate, response));
         }
     });
 
