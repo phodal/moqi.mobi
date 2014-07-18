@@ -20,12 +20,12 @@ define([
     var BlogPostView = Backbone.View.extend ({
         el: $("#content"),
 
-        initalize: function(){
-            getBlog("1.json");
+        initialize: function(){
+            this.getBlog();
         },
 
         getBlog: function(slug) {
-            url = urlConfig["blogListUrl"] + slug;
+            var url = urlConfig["blogListUrl"];
             var that = this;
             collection = new BlogPostModel;
             collection.initialize(url);
@@ -37,16 +37,15 @@ define([
         },
 
         render: function(response){
-            var info = [];
-
-            console.log(response);
-
             var parseDate = function(dateTime){
                 var date = new Date(dateTime);
                 return date.getFullYear() +'年'+ (date.getMonth()+1) +'月'+ date.getDate() + '日';
             };
 
-            this.$el.html(Mustache.to_html(blogPostsTemplate, info));
+            _.each(response, function(data,index){
+                data["created"] = parseDate(data["created"]);
+            });
+            this.$el.html(Mustache.to_html(blogPostsTemplate, response));
         }
     });
 
