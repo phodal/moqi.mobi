@@ -5,7 +5,7 @@ define([
     '../../js/ProductsView',
     'json!/configure.json',
     'text!/templates/blog_details.html',
-    "text!/templates/blog_posts.html"
+    "text!/templates/blog_posts_lists.html"
 ],function($, _, Mustache, ProductsView, configure, blogDetailsTemplate, blogPostsTemplate){
 
     var BlogPostModel = Backbone.Model.extend({

@@ -224,3 +224,14 @@ p {
         font-size: 3em;
     }
 }
+
+.blogPosts a {
+    text-decoration: none;
+    color:#195A94;
+}
+.blogPosts .date{
+    color: #48A682;
+    font-size: 11px;
+    line-height: 1.5em;
+    margin-bottom: 0px;
+}
