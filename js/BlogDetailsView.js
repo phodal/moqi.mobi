@@ -4,9 +4,8 @@ define([
     'mustache',
     '../../js/ProductsView',
     'json!/configure.json',
-    'text!/templates/blog_details.html',
-    "text!/templates/blog_posts_lists.html"
-],function($, _, Mustache, ProductsView, configure, blogDetailsTemplate, blogPostsTemplate){
+    'text!/templates/blog_details.html'
+],function($, _, Mustache, ProductsView, configure, blogDetailsTemplate){
 
     var BlogPostModel = Backbone.Model.extend({
         name: 'Blog Posts',
@@ -25,7 +24,7 @@ define([
         },
 
         getBlog: function(slug) {
-            url = configure["baseurl"] + "blog/" + slug;
+            url = configure["blogPostUrl"] + slug;
             var that = this;
             collection = new BlogPostModel;
             collection.initialize(url);

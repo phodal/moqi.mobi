@@ -7,7 +7,7 @@
         "copyrightInfo": "@ 2014 Moqi.mobi. All Rights Reserved"
     },
     "blogPostUrl": "http://api.phodal.net/blog/",
-    "blogListUrl": "http://0.0.0.0:8000/",
+    "blogListUrl": "http://api.phodal.net/blog/page/",
     "product":[
         {
             "type": "个人",

@@ -3,29 +3,48 @@ define([
     'underscore',
     'mustache',
     "text!/templates/blog_posts_lists.html",
-    "json!http://api.phodal.net/blog/page/1"
-],function($, _, Mustache, blogPostsTemplate, blogPosts){
+    "json!/configure.json"
+],function($, _, Mustache,blogPostsTemplate, configure){
+
+    this.urlConfig = configure;
+    var BlogPostModel = Backbone.Model.extend({
+        name: 'Blog Posts',
+        url: function(){
+            return this.instanceUrl;
+        },
+        initialize: function(props){
+            this.instanceUrl = props;
+        }
+    });
 
     var BlogPostView = Backbone.View.extend ({
         el: $("#content"),
 
-        render: function(){
+        initalize: function(){
+            getBlog("1.json");
+        },
+
+        getBlog: function(slug) {
+            url = urlConfig["blogListUrl"] + slug;
+            var that = this;
+            collection = new BlogPostModel;
+            collection.initialize(url);
+            collection.fetch({
+                success: function(collection, response){
+                    that.render(response);
+                }
+            });
+        },
+
+        render: function(response){
             var info = [];
+
+            console.log(response);
 
             var parseDate = function(dateTime){
                 var date = new Date(dateTime);
                 return date.getFullYear() +'年'+ (date.getMonth()+1) +'月'+ date.getDate() + '日';
             };
-
-            $.each(blogPosts,function(key,val){
-                var results=[];
-                results.title = val["title"];
-                results.description = val["description"];
-                results.slug = val["slug"];
-                results.keywords = val["keywords"];
-                results.created = parseDate(val["created"]);
-                info.push(results);
-            });
 
             this.$el.html(Mustache.to_html(blogPostsTemplate, info));
         }

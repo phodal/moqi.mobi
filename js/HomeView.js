@@ -3,13 +3,14 @@ define([
         'underscore',
         'mustache',
         'text!/index.html',
-        'json!http://api.phodal.net/blog/page/1',
+        'text!/templates/about.html',
         'json!/configure.json',
         'text!/templates/product.html',
         '../../js/BlogPostView',
         '../../js/ProductsView',
-        '../../js/FooterView'
-],function($, _, Mustache, indexTemplate, blogPosts, configure, productTemplate, BlogPostView, ProductsView, FooterView){
+        '../../js/FooterView',
+        '../../js/AboutView'
+],function($, _, Mustache, indexTemplate, aboutTemplate, configure, productTemplate, BlogPostView, ProductsView, FooterView, AboutView){
 
         var HomeView = Backbone.View.extend ({
             el:$('head'),
@@ -21,7 +22,12 @@ define([
                 var footerView = new FooterView();
                 footerView.render();
 
-                this.$el.html(Mustache.to_html(indexTemplate, configure["seoinfo"]));
+                var aboutView = new AboutView();
+                aboutView.render();
+
+                var html = Mustache.to_html(indexTemplate, configure["seoinfo"]);
+
+                this.$el.html(html);
             }
         });
 

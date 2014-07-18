@@ -4,14 +4,16 @@ define([
     'backbone',
     'js/HomeView.js',
     'js/ProductPage.js',
-    'js/BlogDetailsView.js'
-],function($, _, Backbone, HomeView, ProductPage, BlogDetailsView){
+    'js/BlogDetailsView.js',
+    'js/AboutView.js'
+],function($, _, Backbone, HomeView, ProductPage, BlogDetailsView, AboutView){
 
     var AppRouter = Backbone.Router.extend({
         routes: {
             'index': 'homePage',
             'product': 'productPage',
             'blog/*slug': 'blog',
+            'about':'about',
             '*actions': 'homePage'
         }
     });
@@ -26,6 +28,11 @@ define([
         app_router.on('route:productPage', function(){
             var productPage = new ProductPage();
             productPage.render();
+        });
+
+        app_router.on('route:about', function(){
+            var aboutView = new AboutView();
+            aboutView.render();
         });
 
         app_router.on('route:blog', function(blogSlug){
