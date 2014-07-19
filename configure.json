@@ -9,24 +9,31 @@
     },
     "blogPostUrl": "http://api.phodal.net/blog/",
     "blogListUrl": "/1.json",
+    "productName": "墨颀 CMS",
     "product":[
         {
             "type": "个人",
+            "type_en": "person",
             "price":"",
-            "addInfo":"",
-            "css": "pricing-table-free"
+            "addInfo":"Nothing",
+            "css": "pricing-table-free",
+            "more": "<li>Unlimited bandwidth</li><li>Open</li>"
         },
         {
             "type": "商业",
+            "type_en": "business",
             "price": "",
             "addInfo":"",
-            "css": "pricing-table-biz pricing-table-selected"
+            "css": "pricing-table-biz pricing-table-selected",
+            "more": "<li>Biz</li><li>Open</li>"
         },
         {
             "type": "企业",
+            "type_en": "enterprise",
             "price": "",
             "addInfo":"",
-            "css": "pricing-table-enterprise"
+            "css": "pricing-table-enterprise",
+            "more": "<li>Limited</li><li>Open</li>"
         }
     ]
 }
