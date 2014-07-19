@@ -8,8 +8,11 @@ define([
 ],function($, _, Mustache, aboutTemplate, configure, FooterView){
 
     var AboutView = Backbone.View.extend ({
-        el: $("#about"),
+        el: $("#content"),
 
+        initialize: function(){
+
+        },
         render: function(){
             this.$el.html(Mustache.to_html(aboutTemplate, configure));
 

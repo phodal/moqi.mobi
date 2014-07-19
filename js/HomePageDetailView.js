@@ -2,7 +2,7 @@ define([
     'jquery',
     'underscore',
     'mustache',
-    "text!/templates/blog_posts_lists.html",
+    "text!/templates/homepage_detail.html",
     "json!/configure.json"
 ],function($, _, Mustache,blogPostsTemplate, configure){
 
@@ -17,14 +17,14 @@ define([
         }
     });
 
-    var BlogPostView = Backbone.View.extend ({
+    var HomePageDetailView = Backbone.View.extend ({
         el: $("#content"),
 
         initialize: function(){
             this.getBlog();
         },
 
-        getBlog: function(slug) {
+        getBlog: function() {
             var url = urlConfig["blogListUrl"];
             var that = this;
             collection = new BlogPostModel;
@@ -45,9 +45,13 @@ define([
             _.each(response, function(data,index){
                 data["created"] = parseDate(data["created"]);
             });
+
+            var about = {about:urlConfig["about"] };
+            response.push(about);
+            console.log(response)
             this.$el.html(Mustache.to_html(blogPostsTemplate, response));
         }
     });
 
-    return BlogPostView;
+    return HomePageDetailView;
 });

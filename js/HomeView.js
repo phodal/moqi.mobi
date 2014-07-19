@@ -6,18 +6,17 @@ define([
         'text!/templates/about.html',
         'json!/configure.json',
         'text!/templates/product.html',
-        '../../js/BlogPostView',
+        '../../js/HomePageDetailView',
         '../../js/ProductsView',
         '../../js/FooterView',
         '../../js/AboutView'
-],function($, _, Mustache, indexTemplate, aboutTemplate, configure, productTemplate, BlogPostView, ProductsView, FooterView, AboutView){
+],function($, _, Mustache, indexTemplate, aboutTemplate, configure, productTemplate, HomePageDetailView, ProductsView, FooterView, AboutView){
 
         var HomeView = Backbone.View.extend ({
-            el:$('head'),
+            el:$('#aboutArea'),
 
             render: function(){
-                var blogPostView = new BlogPostView();
-                blogPostView.render();
+                var homepage = new HomePageDetailView();
 
                 var footerView = new FooterView();
                 footerView.render();
@@ -25,8 +24,7 @@ define([
                 var aboutView = new AboutView();
                 aboutView.render();
 
-                var html = Mustache.to_html(indexTemplate, configure["seoinfo"]);
-
+                var html = Mustache.to_html(indexTemplate, configure);
                 this.$el.html(html);
             }
         });
