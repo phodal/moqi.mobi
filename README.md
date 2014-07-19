@@ -34,3 +34,7 @@
 1. [构建基于Javascript的移动web CMS入门——简介](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms/)
 
 2. [构建基于Javascript的移动web CMS——Hello,World](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-simple-example/)
+
+##交流讨论
+
+QQ群: 344271543
