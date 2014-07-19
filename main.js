@@ -1,5 +1,6 @@
 require.config({
     paths: {
+        'text': 'text',
         jquery: 'jquery'
     },
     shim: {
