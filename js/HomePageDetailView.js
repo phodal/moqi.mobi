@@ -46,9 +46,11 @@ define([
                 data["created"] = parseDate(data["created"]);
             });
 
-            var about = {about:urlConfig["about"] };
+            var about = {
+                about:urlConfig["about"],
+                aboutcompany:urlConfig["aboutcompany"]
+            };
             response.push(about);
-            console.log(response)
             this.$el.html(Mustache.to_html(blogPostsTemplate, response));
         }
     });
