@@ -5,8 +5,9 @@ define([
     'js/HomeView.js',
     'js/ProductPage.js',
     'js/BlogDetailsView.js',
-    'js/AboutView.js'
-],function($, _, Backbone, HomeView, ProductPage, BlogDetailsView, AboutView){
+    'js/AboutView.js',
+    'js/MoqiView.js'
+],function($, _, Backbone, HomeView, ProductPage, BlogDetailsView, AboutView, MoqiView){
 
     var AppRouter = Backbone.Router.extend({
         routes: {
@@ -14,6 +15,7 @@ define([
             'product': 'productPage',
             'blog/*slug': 'blog',
             'about':'about',
+            'project': 'project',
             '*actions': 'homePage'
         }
     });
@@ -33,6 +35,11 @@ define([
         app_router.on('route:about', function(){
             var aboutView = new AboutView();
             aboutView.render();
+        });
+
+        app_router.on('route:project', function(){
+            var moqiView = new MoqiView();
+            moqiView.render();
         });
 
         app_router.on('route:blog', function(blogSlug){
