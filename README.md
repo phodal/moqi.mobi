@@ -47,6 +47,8 @@ QQ群: 344271543
 
 3. [构建基于Javascript的移动web CMS——模板](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-generate-html/)
 
+4. [构建基于Javascript的移动web CMS——添加jQuery插件](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-add-jquery-plugins/)
+
 ## Liscense
 
 © 2014 Phodal Huang. This code is distributed under the MIT license.
