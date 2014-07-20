@@ -4,7 +4,7 @@ define([
     'mustache',
     'text!/templates/moqi.html',
     '../../js/FooterView',
-    'text!/info/about.txt'
+    'mdown!/info/about.md'
 ],function($, _, Mustache, moqiTemplate, FooterView, aboutMoqi){
     var BasicView = Backbone.View.extend ({
         el: $("#content"),

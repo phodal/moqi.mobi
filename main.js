@@ -5,9 +5,11 @@ require.config({
         jquery: 'jquery-2.1.1.min',
         async: 'require/async',
         json: 'require/json',
+        mdown: 'require/mdown',
         router: '../router',
         templates: '../templates',
-        jquerySidr: 'jquery.sidr.min'
+        jquerySidr: 'jquery.sidr.min',
+        markdownConverter : 'require/Markdown.Converter'
     },
     shim: {
         jquerySidr:["jquery"],
