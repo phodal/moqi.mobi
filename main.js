@@ -6,9 +6,11 @@ require.config({
         async: 'require/async',
         json: 'require/json',
         router: '../router',
-        templates: '../templates'
+        templates: '../templates',
+        jquerySidr: 'jquery.sidr.min'
     },
     shim: {
+        jquerySidr:["jquery"],
         underscore: {
             exports: '_'
         }
