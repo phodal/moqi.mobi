@@ -9,18 +9,13 @@ define([
         '../../js/HomePageDetailView',
         '../../js/ProductsView',
         '../../js/FooterView',
-        '../../js/AboutView',
-        'jquerySidr'
+        '../../js/AboutView'
 ],function($, _, Mustache, indexTemplate, aboutTemplate, configure, productTemplate, HomePageDetailView, ProductsView, FooterView, AboutView){
 
         var HomeView = Backbone.View.extend ({
             el:$('#aboutArea'),
 
             render: function(){
-                $(document).ready(function() {
-                    $('#menu').sidr();
-                });
-
                 var homepage = new HomePageDetailView();
 
                 var footerView = new FooterView();

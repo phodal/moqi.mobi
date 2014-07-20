@@ -2,10 +2,14 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'router'
+    'router',
+    'jquerySidr'
 ], function($, _, Backbone, Router){
 
     var initialize = function(){
+        $(document).ready(function() {
+            $('#menu').sidr();
+        });
         Router.initialize();
     };
 
