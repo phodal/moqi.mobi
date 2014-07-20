@@ -33,7 +33,6 @@
  - 压缩js脚本(Minify Javascript)
  - 部署前将HTML中的数据用``configure.json``中替换
  - 选定后台Server(框架未定)
- - 添加多说评论
 
 ##交流讨论
 
