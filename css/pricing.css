@@ -431,9 +431,25 @@ h2, h3 {
     border: 1px solid transparent;
     border-radius: 4px;
 }
-
-
 a#menu {
     text-decoration: none;
-    font-size: 24px;
+    color: #333;
+}
+.header{
+    /*background: #111;*/
+    color: #888;
+    text-align: center;
+    padding: 0.8em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
 }
