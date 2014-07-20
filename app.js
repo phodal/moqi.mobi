@@ -8,6 +8,7 @@ define([
 
     var initialize = function(){
         $(document).ready(function() {
+            $('#sidr').show();
             $('#menu').sidr();
         });
         Router.initialize();
