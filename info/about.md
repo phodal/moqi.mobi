@@ -20,3 +20,5 @@ Github网站: [https://github.com/gmszone/moqi.mobi](https://github.com/gmszone/
 3. [构建基于Javascript的移动web CMS——模板](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-generate-html/)
 
 4. [构建基于Javascript的移动web CMS——添加jQuery插件](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-add-jquery-plugins/)
+
+###快来加入我们
