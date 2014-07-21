@@ -431,18 +431,19 @@ h2, h3 {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    width:100%;
 }
 a#menu {
     text-decoration: none;
     color: #333;
+    float:left;
 }
 .header{
-    /*background: #111;*/
     color: #888;
     text-align: center;
-    padding: 0.8em;
-    text-align: center;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 .sr-only{
     position: absolute;
@@ -453,4 +454,10 @@ a#menu {
     overflow: hidden;
     clip: rect(0,0,0,0);
     border: 0;
+}
+.monav{
+    position: fixed;
+    background-color: #fff;
+    width:100%;
+    box-shadow: 0 2px 1px rgba(0,0,0, 0.10);
 }
