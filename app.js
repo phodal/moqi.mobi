@@ -18,6 +18,7 @@ define([
 
                     $('a[href$="#/'+Backbone.history.fragment+'"]').parent().addClass("active");
                     $.sidr('close');
+                    window.scrollTo(0,0);
                 }
             });
         });
