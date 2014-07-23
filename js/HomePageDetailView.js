@@ -2,9 +2,10 @@ define([
     'jquery',
     'underscore',
     'mustache',
-    "text!/templates/homepage_detail.html",
-    "json!/configure.json"
-],function($, _, Mustache,blogPostsTemplate, configure){
+    'text!/templates/homepage_detail.html',
+    'json!/configure.json',
+    'mdown!/info/aboutCMS.md'
+],function($, _, Mustache,blogPostsTemplate, configure, aboutCMS){
 
     this.urlConfig = configure;
     var BlogPostModel = Backbone.Model.extend({
@@ -37,17 +38,8 @@ define([
         },
 
         render: function(response){
-            var parseDate = function(dateTime){
-                var date = new Date(dateTime);
-                return date.getFullYear() +'年'+ (date.getMonth()+1) +'月'+ date.getDate() + '日';
-            };
-
-            _.each(response, function(data,index){
-                data["created"] = parseDate(data["created"]);
-            });
-
             var about = {
-                about:urlConfig["about"],
+                about:aboutCMS,
                 aboutcompany:urlConfig["aboutcompany"]
             };
             response.push(about);
