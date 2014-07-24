@@ -13,10 +13,9 @@ define([
 
         },
         render: function(){
-            var data = {
+            this.$el.html(Mustache.to_html(moqiTemplate, {
                 data:aboutMoqi
-            };
-            this.$el.html(Mustache.to_html(moqiTemplate, data));
+            }));
 
             var footerView = new FooterView();
             footerView.render();
