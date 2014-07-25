@@ -1,4 +1,11 @@
-define(['jquery', 'underscore', 'mustache'],function($, _, Mustache){
+define(['jquery', 'underscore', 'mustache'],
+    function($, _, Mustache){
+
+    var RenderBlog = function (params, url, template) {
+        this.params = params;
+        this.url = url;
+        this.template = template;
+    };
 
     var BlogPostModel = Backbone.Model.extend({
         name: 'Blog Posts',
@@ -10,13 +17,7 @@ define(['jquery', 'underscore', 'mustache'],function($, _, Mustache){
         }
     });
 
-    this.GetBlog = function(params, url, template) {
-        this.params = params;
-        this.url = url;
-        this.template = template;
-    };
-
-    GetBlog.prototype.getBlog = function(addInfo) {
+    RenderBlog.prototype.renderBlog = function(addInfo) {
         var template = this.template;
         var params = this.params;
         var url = this.url;
@@ -28,14 +29,14 @@ define(['jquery', 'underscore', 'mustache'],function($, _, Mustache){
                 if(addInfo !== undefined){
                     response.push(addInfo);
                 }
-                GetBlog.prototype.render(params, template, response);
+                RenderBlog.prototype.render(params, template, response);
             }
         });
     };
 
-    GetBlog.prototype.render = function(params, template, response) {
+    RenderBlog.prototype.render = function(params, template, response) {
         $(params).html(Mustache.to_html(template, response));
     };
 
-    return GetBlog;
+    return RenderBlog;
 });

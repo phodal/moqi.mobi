@@ -11,10 +11,9 @@ define([
 
         },
         render: function(){
-            var data = {
+            this.$el.html(Mustache.to_html(basicTemplate, {
                 data:"data"
-            };
-            this.$el.html(Mustache.to_html(basicTemplate, data));
+            }));
 
         }
     });
