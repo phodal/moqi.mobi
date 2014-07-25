@@ -4,39 +4,20 @@ define([
     'mustache',
     '../../js/ProductsView',
     'json!/configure.json',
-    'text!/templates/blog_details.html'
-],function($, _, Mustache, ProductsView, configure, blogDetailsTemplate){
-
-    var BlogPostModel = Backbone.Model.extend({
-        name: 'Blog Posts',
-        url: function(){
-            return this.instanceUrl;
-        },
-        initialize: function(props){
-            this.instanceUrl = props;
-        }
-    });
+    'text!/templates/blog_details.html',
+    '../../js/getBlog'
+],function($, _, Mustache, ProductsView, configure, blogDetailsTemplate, GetBlog){
 
     var BlogDetailsView = Backbone.View.extend ({
         el: $("#content"),
 
         initialize: function () {
+            this.params='#content';
         },
 
         getBlog: function(slug) {
-            url = configure["blogPostUrl"] + slug;
-            var that = this;
-            collection = new BlogPostModel;
-            collection.initialize(url);
-            collection.fetch({
-                success: function(collection, response){
-                    that.render(response);
-                }
-            });
-        },
-
-        render: function(response){
-            this.$el.html(Mustache.to_html(blogDetailsTemplate, response));
+            var getblog = new GetBlog(this.params, configure['blogPostUrl']+slug, blogDetailsTemplate);
+            getblog.getBlog();
         }
     });
 
