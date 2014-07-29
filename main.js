@@ -9,10 +9,12 @@ require.config({
         router: '../router',
         templates: '../templates',
         jquerySidr: 'jquery.sidr.min',
-        markdownConverter : 'require/Markdown.Converter'
+        markdownConverter : 'require/Markdown.Converter',
+        touchwipe: 'jquery.touchwipe.min'
     },
     shim: {
         jquerySidr:["jquery"],
+        touchwipe: ["jquery"],
         underscore: {
             exports: '_'
         }
