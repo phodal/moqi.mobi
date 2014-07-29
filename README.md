@@ -53,6 +53,11 @@ QQ群: 344271543
 6. [构建基于Javascript的移动web CMS——加载JSON文件](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-json-configure/)
 
 7. [构建基于Javascript的移动web CMS——生成博客(一)](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-a-simple-blog/)
+
+8. [构建基于Javascript的移动CMS——生成博客(二).路由](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-add-blog-router/)
+
+9. [构建基于Javascript的移动CMS——生成博客(三).重构](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-blog-refactor/)
+
 ## Liscense
 
 © 2014 Phodal Huang. This code is distributed under the MIT license.
