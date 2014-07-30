@@ -58,6 +58,8 @@ QQ群: 344271543
 
 9. [构建基于Javascript的移动CMS——生成博客(三).重构](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-blog-refactor/)
 
+10. [构建基于Javascript的移动CMS——添加滑动](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-add-swipe/)
+
 ## Liscense
 
 © 2014 Phodal Huang. This code is distributed under the MIT license.
