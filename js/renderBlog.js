@@ -18,18 +18,16 @@ define(['jquery', 'underscore', 'mustache'],
     });
 
     RenderBlog.prototype.renderBlog = function(addInfo) {
-        var template = this.template;
-        var params = this.params;
-        var url = this.url;
+        var that = this;
         var collection = new BlogPostModel;
 
-        collection.initialize(url);
+        collection.initialize(this.url);
         collection.fetch({
             success: function(collection, response){
                 if(addInfo !== undefined){
                     response.push(addInfo);
                 }
-                RenderBlog.prototype.render(params, template, response);
+                RenderBlog.prototype.render(that.params, that.template, response);
             }
         });
     };
