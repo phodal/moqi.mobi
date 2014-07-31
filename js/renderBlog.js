@@ -18,7 +18,7 @@ define(['jquery', 'underscore', 'mustache'],
     });
 
     RenderBlog.prototype.renderBlog = function(addInfo) {
-        var self = this;
+        var that = this;
         var collection = new BlogPostModel;
 
         collection.initialize(this.url);
@@ -27,7 +27,7 @@ define(['jquery', 'underscore', 'mustache'],
                 if(addInfo !== undefined){
                     response.push(addInfo);
                 }
-                RenderBlog.prototype.render(self.params, self.template, response);
+                RenderBlog.prototype.render(that.params, that.template, response);
             }
         });
     };
