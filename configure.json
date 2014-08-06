@@ -1,39 +1,35 @@
 {
-    "aboutcompany":"墨颀CMS",
-    "about":"about the moqi cms",
+    "aboutcompany": "墨颀CMS",
+    "about": "about the moqi cms",
     "seoinfo": {
         "description": "墨颀移动 CMS移动平台的CMS解决方案",
         "keywords": "移动CMS,移动CMS框架,移动平台CMS,移动CMS系统",
         "title": "墨颀 CMS - 移动平台的CMS解决方案",
-        "copyrightInfo": "@ 2014 <a href='http://cms.moqi.mobi'>墨颀 CMS</a> All Rights Reserved"
+        "copyrightInfo": "A <a href='http://www.phodal.com/myproject/'>Phodal</a> Project @ 2014 <a href='http://cms.moqi.mobi'>墨颀 CMS</a> All Rights Reserved"
     },
     "blogPostUrl": "http://api.phodal.net/blog/",
     "blogListUrl": "/1.json",
     "productName": "墨颀 CMS",
-    "product":[
-        {
-            "type": "个人",
-            "type_en": "person",
-            "price":"",
-            "addInfo":"Nothing",
-            "css": "pricing-table-free",
-            "more": "<li>Unlimited bandwidth</li><li>Open</li>"
-        },
-        {
-            "type": "商业",
-            "type_en": "business",
-            "price": "",
-            "addInfo":"",
-            "css": "pricing-table-biz pricing-table-selected",
-            "more": "<li>Biz</li><li>Open</li>"
-        },
-        {
-            "type": "企业",
-            "type_en": "enterprise",
-            "price": "",
-            "addInfo":"",
-            "css": "pricing-table-enterprise",
-            "more": "<li>Limited</li><li>Open</li>"
-        }
-    ]
+    "product": [{
+        "type": "个人",
+        "type_en": "person",
+        "price": "",
+        "addInfo": "Nothing",
+        "css": "pricing-table-free",
+        "more": "<li>Unlimited bandwidth</li><li>Open</li>"
+    }, {
+        "type": "商业",
+        "type_en": "business",
+        "price": "",
+        "addInfo": "",
+        "css": "pricing-table-biz pricing-table-selected",
+        "more": "<li>Biz</li><li>Open</li>"
+    }, {
+        "type": "企业",
+        "type_en": "enterprise",
+        "price": "",
+        "addInfo": "",
+        "css": "pricing-table-enterprise",
+        "more": "<li>Limited</li><li>Open</li>"
+    }]
 }
