@@ -12,12 +12,8 @@ define([
     var PageViewHelper = Backbone.View.extend ({
         el: $("#basic"),
 
-        initialize: function(){
-
-        },
-        addRouter: function(router){
+        initialize: function(router){
             that.app_router = router;
-            return this;
         },
         addRouterOn: function(routerPath, PageView){
             that.app_router.on(routerPath, function () {

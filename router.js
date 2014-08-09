@@ -24,23 +24,15 @@ define([
     var initialize = function() {
         var app_router = new AppRouter;
 
-        var pageViewHelper = new PageViewHelper();
+        var pageViewHelper = new PageViewHelper(app_router);
 
-        pageViewHelper
-            .addRouter(app_router)
-            .addRouterOn('route:homePage', HomeView);
+        pageViewHelper.addRouterOn('route:homePage', HomeView);
 
-        pageViewHelper
-            .addRouter(app_router)
-            .addRouterOn('route:productPage', ProductPage);
+        pageViewHelper.addRouterOn('route:productPage', ProductPage);
 
-        pageViewHelper
-            .addRouter(app_router)
-            .addRouterOn('route:about', AboutView);
+        pageViewHelper.addRouterOn('route:about', AboutView);
 
-        pageViewHelper
-            .addRouter(app_router)
-            .addRouterOn('route:project', MoqiView);
+        pageViewHelper.addRouterOn('route:project', MoqiView);
 
         app_router.on('route:blog', function(blogSlug){
             var blogDetailsView = new BlogDetailsView();
