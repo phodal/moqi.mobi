@@ -6,8 +6,10 @@ define([
     'js/ProductPage.js',
     'js/BlogDetailsView.js',
     'js/AboutView.js',
-    'js/MoqiView.js'
-],function($, _, Backbone, HomeView, ProductPage, BlogDetailsView, AboutView, MoqiView){
+    'js/MoqiView.js',
+    'js/PageViewHelper.js',
+    'q'
+],function($, _, Backbone, HomeView, ProductPage, BlogDetailsView, AboutView, MoqiView, PageViewHelper, Q){
 
     var AppRouter = Backbone.Router.extend({
         routes: {
@@ -22,25 +24,23 @@ define([
     var initialize = function() {
         var app_router = new AppRouter;
 
-        app_router.on('route:homePage', function(){
-            var homeView = new HomeView();
-            homeView.render();
-        });
+        var pageViewHelper = new PageViewHelper();
 
-        app_router.on('route:productPage', function(){
-            var productPage = new ProductPage();
-            productPage.render();
-        });
+        pageViewHelper
+            .addRouter(app_router)
+            .addRouterOn('route:homePage', HomeView);
 
-        app_router.on('route:about', function(){
-            var aboutView = new AboutView();
-            aboutView.render();
-        });
+        pageViewHelper
+            .addRouter(app_router)
+            .addRouterOn('route:productPage', ProductPage);
 
-        app_router.on('route:project', function(){
-            var moqiView = new MoqiView();
-            moqiView.render();
-        });
+        pageViewHelper
+            .addRouter(app_router)
+            .addRouterOn('route:about', AboutView);
+
+        pageViewHelper
+            .addRouter(app_router)
+            .addRouterOn('route:project', MoqiView);
 
         app_router.on('route:blog', function(blogSlug){
             var blogDetailsView = new BlogDetailsView();

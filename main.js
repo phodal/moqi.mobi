@@ -10,7 +10,8 @@ require.config({
         templates: '../templates',
         jquerySidr: 'jquery.sidr.min',
         markdownConverter : 'require/Markdown.Converter',
-        touchwipe: 'jquery.touchwipe.min'
+        touchwipe: 'jquery.touchwipe.min',
+        q: 'q'
     },
     shim: {
         jquerySidr:["jquery"],
