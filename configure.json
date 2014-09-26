@@ -8,7 +8,7 @@
         "copyrightInfo": "A <a href='http://www.phodal.com/myproject/'>Phodal</a> Project @ 2014 <a href='http://cms.moqi.mobi'>墨颀 CMS</a> All Rights Reserved"
     },
     "blogPostUrl": "http://api.phodal.net/blog/",
-    "blogListUrl": "/1.json",
+    "blogListUrl": "http://api.phodal.net/blog/page/1",
     "productName": "墨颀 CMS",
     "product": [{
         "type": "个人",
