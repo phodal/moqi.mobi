@@ -4,8 +4,8 @@ define([
     'mustache',
     'json!/configure.json',
     'text!/templates/product.html',
-    '../../js/ProductsView',
-    '../../js/FooterView'
+    'js/ProductsView',
+    'js/FooterView'
 ],function($, _, Mustache, configure, productTemplate, ProductsView, FooterView){
 
     var ProductPage = Backbone.View.extend ({

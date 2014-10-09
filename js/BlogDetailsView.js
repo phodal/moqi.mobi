@@ -2,10 +2,10 @@ define([
     'jquery',
     'underscore',
     'mustache',
-    '../../js/ProductsView',
+    'js/ProductsView',
     'json!/configure.json',
     'text!/templates/blog_details.html',
-    '../../js/renderBlog'
+    'js/renderBlog'
 ],function($, _, Mustache, ProductsView, configure, blogDetailsTemplate, GetBlog){
 
     var BlogDetailsView = Backbone.View.extend ({

@@ -3,7 +3,7 @@ define([
     'underscore',
     'mustache',
     'text!/templates/moqi.html',
-    '../../js/FooterView',
+    'js/FooterView',
     'mdown!/info/about.md'
 ],function($, _, Mustache, moqiTemplate, FooterView, aboutMoqi){
     var BasicView = Backbone.View.extend ({

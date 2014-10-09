@@ -6,10 +6,10 @@ define([
         'text!/templates/about.html',
         'json!/configure.json',
         'text!/templates/product.html',
-        '../../js/HomePageDetailView',
-        '../../js/ProductsView',
-        '../../js/FooterView',
-        '../../js/AboutView'
+        'js/HomePageDetailView',
+        'js/ProductsView',
+        'js/FooterView',
+        'js/AboutView'
 ],function($, _, Mustache, indexTemplate, aboutTemplate, configure, productTemplate, HomePageDetailView, ProductsView, FooterView, AboutView){
 
         var HomeView = Backbone.View.extend ({

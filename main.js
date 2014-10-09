@@ -1,17 +1,20 @@
 require.config({
-    baseUrl: 'lib/',
+    baseUrl: '/',
     paths: {
-        'text': 'text',
-        jquery: 'jquery-2.1.1.min',
-        async: 'require/async',
-        json: 'require/json',
-        mdown: 'require/mdown',
-        router: '../router',
-        templates: '../templates',
-        jquerySidr: 'jquery.sidr.min',
-        markdownConverter : 'require/Markdown.Converter',
-        touchwipe: 'jquery.touchwipe.min',
-        q: 'q'
+        'text': 'lib/text',
+        jquery: 'lib/jquery-2.1.1.min',
+        async: 'lib/require/async',
+        json: 'lib/require/json',
+        mdown: 'lib/require/mdown',
+        router: 'router',
+        templates: 'templates',
+        jquerySidr: 'lib/jquery.sidr.min',
+        markdownConverter : 'lib/require/Markdown.Converter',
+        touchwipe: 'lib/jquery.touchwipe.min',
+        underscore: 'lib/underscore',
+        mustache: 'lib/mustache',
+        backbone: 'lib/backbone',
+        q: 'lib/q'
     },
     shim: {
         jquerySidr:["jquery"],
@@ -22,6 +25,6 @@ require.config({
     }
 });
 
-require(['../app'], function(App){
+require(['app'], function(App){
     App.initialize();
 });

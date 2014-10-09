@@ -60,6 +60,6 @@ QQ群: 344271543
 
 10. [构建基于Javascript的移动CMS——添加滑动](http://www.phodal.com/blog/use-jquery-backbone-mustache-build-mobile-app-cms-add-swipe/)
 
-## Liscense
+## License
 
 © 2014 Phodal Huang. This code is distributed under the MIT license.
