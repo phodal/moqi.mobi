@@ -7,9 +7,8 @@ define([
     'js/BlogDetailsView.js',
     'js/AboutView.js',
     'js/MoqiView.js',
-    'js/PageViewHelper.js',
-    'q'
-],function($, _, Backbone, HomeView, ProductPage, BlogDetailsView, AboutView, MoqiView, PageViewHelper, Q){
+    'js/PageViewHelper.js'
+],function($, _, Backbone, HomeView, ProductPage, BlogDetailsView, AboutView, MoqiView, PageViewHelper){
 
     var AppRouter = Backbone.Router.extend({
         routes: {
