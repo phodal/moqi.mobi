@@ -13,7 +13,7 @@
 
 上面其实是未来的描述，因为现在还在努力开始完善中。
 
-项目地址: http://github.com/gmszone/moqi.mobi
+项目地址: http://github.com/phodal/moqi.mobi
 
 
 ###已支持
