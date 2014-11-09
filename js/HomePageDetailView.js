@@ -14,7 +14,7 @@ define([
             var params = '#content';
             var about = {
                 about: aboutCMS,
-                aboutcompany: configure["aboutcompany"]
+                aboutCompany: configure["aboutCompany"]
             };
             var blogView = new RenderBlog(params, 'http://api.phodal.net/blog/page/1', blogPostsTemplate);
             blogView.renderBlog(about);

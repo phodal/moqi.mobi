@@ -13,8 +13,7 @@ require.config({
         touchwipe: 'lib/jquery.touchwipe.min',
         underscore: 'lib/underscore',
         mustache: 'lib/mustache',
-        backbone: 'lib/backbone',
-        q: 'lib/q'
+        backbone: 'lib/backbone'
     },
     shim: {
         jquerySidr:["jquery"],
