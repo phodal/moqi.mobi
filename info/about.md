@@ -14,25 +14,18 @@
  - Mustache 
  - Pure CSS 
  - Pagedown	
- 
-##如何运行
 
-1. 在目录中运行一个HTTP服务器 
-如``./start.sh``
+###带后台CMS示例
 
-      python -m SimpleHTTPServer 8000  
-或者
- 
-      mongoose
-等等。
+ [https://github.com/phodal/freerice](https://github.com/phodal/freerice)
 
-2. 修改``configure.conf``
+ 后台: Nodejs + RESTify + db-migrate(SQLite3)
 
-##待加功能列表
+ 后台测试: Sinon + Mocha + Chai
 
- - 压缩js脚本(Minify Javascript)
- - 部署前将HTML中的数据用``configure.json``中替换
- - 选定后台Server(框架未定)
+ 前台: MoQi CMS
+
+ 前台测试: jasmine-jquery + Jasmine + Sinon
 
 ##交流讨论
 

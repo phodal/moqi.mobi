@@ -11,20 +11,16 @@
  
 ##续
 
-上面其实是未来的描述，因为现在还在努力开始完善中。
-
 项目地址: http://github.com/phodal/moqi.mobi
 
+###带后台CMS示例
 
-###已支持
+[https://github.com/phodal/freerice](https://github.com/phodal/freerice)
 
- - Django+Tastypie API
- 
-###进行中
- 
- - Wordpress
- 
-###待支持
- 
- - 用户管理
- 
+后台: Nodejs + RESTify + db-migrate(SQLite3)
+
+后台测试: Sinon + Mocha + Chai
+
+前台: MoQi CMS
+
+前台测试: jasmine-jquery + Jasmine + Sinon
