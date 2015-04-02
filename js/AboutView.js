@@ -18,7 +18,6 @@ define([
             var about = {
                 about: aboutMD
             };
-            console.log(about);
             this.$el.html(Mustache.to_html(aboutTemplate, about));
 
             var footerView = new FooterView();
