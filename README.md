@@ -22,9 +22,9 @@
 
 前台测试: jasmine-jquery + Jasmine + Sinon
 
-##交流讨论
+Screenshot:
 
-QQ群: 344271543
+![Moqi CMS](cms.jpg)
 
 ##相关
 
